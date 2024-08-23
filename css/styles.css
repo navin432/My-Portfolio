@@ -222,3 +222,26 @@ a {
   background: #d1d1d112;
   border: 1px solid #d1d1d112;
 }
+
+/* Bar */
+.skill {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.skill__line--bg {
+  background: var(--color-light__background);
+}
+.skill__line--content {
+  width: 70%;
+  background: orangered;
+  border-radius: 5px;
+  height: 5px;
+}
+
+.skill__details {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
