@@ -5,3 +5,13 @@
 *::before {
   box-sizing: border-box;
 }
+
+:root {
+  --color-background: #202020;
+  --color-light__background:#2b2b2b;
+}
+
+body {
+  color: #d1d1d1;
+}
+
