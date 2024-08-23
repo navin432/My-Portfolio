@@ -121,3 +121,42 @@ body {
   list-style: none;
   padding-left: 0;
 }
+
+/* Grids */
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+p {
+  border: 1px solid #fff;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 580px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .grid--1x2__big {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .grid--1x4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid--1x3__big {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid--1x4__big {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
