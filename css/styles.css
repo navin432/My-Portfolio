@@ -64,7 +64,7 @@ a {
 
 /* Buttons */
 body {
-  background: var(--color-light__background);
+  /* background: var(--color-light__background); */
   padding: 4rem;
 }
 
@@ -182,4 +182,18 @@ body {
 .intro__content {
   color: #d0d0d0;
   margin: 0;
+}
+
+/* Block */
+
+.block {
+  padding: 6rem 2rem;
+}
+
+.block--dark {
+  background: var(--color-background);
+}
+
+.block--grey {
+  background: var(--color-light__background);
 }
