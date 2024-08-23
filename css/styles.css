@@ -56,3 +56,62 @@ h3 {
 h4 {
   font-size: 2.8rem;
 }
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Buttons */
+body {
+  background: var(--color-light__background);
+  padding: 4rem;
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 700;
+  line-height: 4;
+  text-align: center;
+  border: 0;
+}
+
+.btn--white {
+  background: #fff;
+  color: #333;
+  border: 2px solid #fff;
+  transition: 0.4s ease-out;
+}
+
+.btn--white:hover {
+  background: var(--color-background);
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn--transparent {
+  background: var(--color-background);
+  color: #fff;
+  border: 2px solid #fff;
+  transition: 0.4s ease-in;
+}
+
+.btn--transparent:hover {
+  background: #fff;
+  color: #333;
+}
+
+.btn--grey {
+  background: #4e4e4e;
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.btn--grey:hover {
+  background: #fff;
+  color: #333;
+}
