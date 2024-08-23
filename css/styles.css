@@ -160,3 +160,10 @@ p {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* .container */
+.container {
+  width: 1140px;
+  padding-right: 0 1.5rem;
+  margin: 0 auto;
+}
