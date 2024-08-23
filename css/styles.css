@@ -27,11 +27,14 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
 }
+body {
+  background: var(--color-background);
+  padding: 10rem;
+}
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: serif;
 }
 
@@ -63,10 +66,6 @@ a {
 }
 
 /* Buttons */
-body {
-  /* background: var(--color-light__background); */
-  padding: 4rem;
-}
 
 .btn {
   padding: 1.5rem 3rem;
@@ -196,4 +195,30 @@ body {
 
 .block--grey {
   background: var(--color-light__background);
+}
+
+/* Icons */
+.icon-container {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 6rem;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s ease-out;
+}
+
+.icon {
+  font-size: 5.2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.icon__content {
+  margin: 0;
+  font-weight: 600;
+}
+
+.icon-container:hover {
+  background: #d1d1d112;
+  border: 1px solid #d1d1d112;
 }
