@@ -7,13 +7,18 @@
 }
 
 :root {
-  --color-background: #202020;
-  --color-light__background: #2b2b2b;
+  --color-background: #1c1c1e; /* Darker for a more refined look */
+  --color-light__background: #3a3a3c; /* Slightly lighter for contrast */
+  --primary-color: #0056b3; /* Muted blue for professionalism */
+  --accent-color: #ff6f61; /* Warm accent color for highlights */
+  --text-color: #e0e0e0; /* Softer text color */
+  --text-muted: #b3b3b3; /* Muted text for less prominent elements */
 }
 
 /* Typography */
 ::selection {
-  background: #007bff;
+  background: var(--primary-color);
+  color: white;
 }
 
 html {
@@ -21,27 +26,21 @@ html {
 }
 
 body {
-  color: #d1d1d1;
+  color: var(--text-color);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
-}
-body {
   background: var(--color-background);
   padding: 10rem;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: serif;
-}
-
-h1,
-h2,
-h3 {
-  color: #fff;
+  color: #ffffff;
 }
 
 h1 {
@@ -50,23 +49,22 @@ h1 {
 
 h2 {
   font-size: 3.2rem;
-  line-height: 1.1875;
+  line-height: 1.2;
 }
-h3 {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
+
+h3,
 h4 {
   font-size: 2.8rem;
+  font-weight: 700;
 }
 
 /* Links */
 a {
+  color: var(--text-color);
   text-decoration: none;
 }
 
 /* Buttons */
-
 .btn {
   padding: 1.5rem 3rem;
   text-transform: uppercase;
@@ -74,45 +72,42 @@ a {
   cursor: pointer;
   border-radius: 30px;
   font-weight: 700;
-  line-height: 4;
+  line-height: 1;
   text-align: center;
   border: 0;
+  transition: 0.3s ease;
 }
 
 .btn--white {
-  background: #fff;
-  color: #333;
-  border: 2px solid #fff;
-  transition: 0.4s ease-out;
+  background: #ffffff;
+  color: var(--color-background);
+  border: 2px solid #ffffff;
 }
 
 .btn--white:hover {
   background: var(--color-background);
-  color: #fff;
-  border: 2px solid #fff;
+  color: #ffffff;
 }
 
 .btn--transparent {
-  background: var(--color-background);
-  color: #fff;
-  border: 2px solid #fff;
-  transition: 0.4s ease-in;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-muted);
 }
 
 .btn--transparent:hover {
-  background: #fff;
-  color: #333;
+  background: var(--text-color);
+  color: var(--color-background);
 }
 
 .btn--grey {
-  background: #4e4e4e;
-  color: #fff;
-  transition: 0.3s ease-in;
+  background: var(--color-light__background);
+  color: var(--text-color);
 }
 
 .btn--grey:hover {
-  background: #fff;
-  color: #333;
+  background: var(--text-color);
+  color: var(--color-background);
 }
 
 /* Lists */
@@ -121,11 +116,16 @@ a {
   padding-left: 0;
 }
 
+.list__item {
+  margin-left: 0;
+  transition: all 0.5s;
+  margin-bottom: 0.3rem;
+  padding: 1rem;
+}
 /* Grids */
-
 .grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem; /* Increased gap for cleaner spacing */
 }
 
 @media screen and (min-width: 580px) {
@@ -134,18 +134,9 @@ a {
   }
 }
 
-@media screen and (min-width: 770px) {
-  .grid--1x2__big {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media screen and (min-width: 1000px) {
   .grid--1x4 {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .grid--1x3__big {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -163,7 +154,6 @@ a {
 }
 
 /* Intro */
-
 .intro {
   text-align: center;
 }
@@ -171,6 +161,7 @@ a {
 .intro__subtitle {
   font-weight: 600;
   display: block;
+  color: var(--text-muted); /* Muted color for less emphasis */
 }
 
 .intro__heading {
@@ -179,12 +170,11 @@ a {
 }
 
 .intro__content {
-  color: #d0d0d0;
+  color: var(--text-color);
   margin: 0;
 }
 
 /* Block */
-
 .block {
   padding: 6rem 2rem;
 }
@@ -199,11 +189,11 @@ a {
 
 /* Icons */
 .icon-container {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
   padding: 6rem;
   border-radius: 5px;
   text-align: center;
-  color: #fff;
+  color: var(--text-color);
   transition: 0.3s ease-out;
 }
 
@@ -219,13 +209,13 @@ a {
 }
 
 .icon-container:hover {
-  background: #d1d1d112;
-  border: 1px solid #d1d1d112;
+  background: rgba(255, 255, 255, 0.1); /* Lighter hover effect */
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Bar */
+/* Skills */
 .skill {
-  color: #fff;
+  color: var(--text-color);
   font-weight: 700;
   margin-bottom: 2.5rem;
 }
@@ -233,9 +223,10 @@ a {
 .skill__line--bg {
   background: var(--color-light__background);
 }
+
 .skill__line--content {
   width: 70%;
-  background: orangered;
+  background: var(--accent-color);
   border-radius: 5px;
   height: 5px;
 }
@@ -244,4 +235,103 @@ a {
   margin-top: 1.3rem;
   display: flex;
   justify-content: space-between;
+  color: var(--text-muted);
+}
+
+/* logo */
+.logo {
+  width: 3rem;
+}
+
+.logo-container::after {
+  content: "avin";
+  font-size: 2.2rem;
+  color: #f7600e;
+  display: inline-block;
+  transform: translate(-0.6rem, -0.8rem);
+}
+
+/* Collapsibles */
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.navbar .fa-solid {
+  font-size: 2.2rem;
+}
+
+.nav__list {
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+.navbar .list__item {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.navbar .list__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-color);
+  transition: width 0.5s ease;
+}
+
+.navbar .list__item:hover::after {
+  width: 100%;
+}
+.navbar .list__item:hover {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.navbar.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 3px -1px #fff;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100vh;
+    opacity: 1;
+  }
+
+  .navbar .list__item {
+    padding: 1rem;
+  }
+
+  .nav__toggler{
+    display: none;
+  }
 }
