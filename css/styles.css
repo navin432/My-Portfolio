@@ -39,7 +39,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: serif;
   color: #ffffff;
 }
 
@@ -76,6 +75,7 @@ a {
   text-align: center;
   border: 0;
   transition: 0.3s ease;
+  display: inline-block;
 }
 
 .btn--white {
@@ -331,7 +331,84 @@ a {
     padding: 1rem;
   }
 
-  .nav__toggler{
+  .nav__toggler {
     display: none;
   }
+}
+
+/* Banner */
+.banner {
+  padding: 2rem;
+  background-image: url("../images/Profile.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.profile {
+  object-fit: cover;
+  height: 400px;
+  position: fixed;
+}
+
+.banner__header h3 {
+  color: var(--text-muted);
+  margin: 0;
+}
+.banner__header .banner__title {
+  margin: 0 0 1rem;
+  line-height: 0.8;
+}
+
+.banner__buttons {
+  margin-top: 3rem;
+}
+
+.banner__buttons .btn:last-of-type {
+  margin-left: 1rem;
+}
+
+.mediaIcons {
+  margin-top: 2.4rem;
+}
+
+.mediaIcons .fa-brands {
+  margin-left: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.fa-facebook {
+  color: #1877f2;
+  border: 1px solid #1877f2;
+}
+
+.fa-linkedin-in {
+  color: #fff;
+  border: 1px solid #0a66c2;
+  transition: all 0.5s;
+}
+.fa-brands.fa-linkedin-in:hover {
+  color: #0a66c2;
+}
+.fa-instagram {
+  color: #f56040;
+  border: 1px solid #f56040;
+}
+
+.fa-brands:hover {
+  color: #fff;
+}
+
+#domain {
+  display: inline-block;
+}
+
+.typed-cursor {
+  margin-left: 2px;
+  font-size: 2.8rem;
 }

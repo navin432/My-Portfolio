@@ -1,3 +1,20 @@
+// Domain
+document.addEventListener("DOMContentLoaded", function () {
+  const typedItems = document
+    .getElementById("domain")
+    .getAttribute("data-typed-items")
+    .split(",");
+
+  new Typed("#domain", {
+    strings: typedItems,
+    typeSpeed: 60,
+    backSpeed: 50,
+    loop: true,
+    backDelay: 1500,
+    startDelay: 500,
+  });
+});
+
 // Collapsibles
 const collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach((item) =>
