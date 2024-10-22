@@ -40,6 +40,7 @@ h2,
 h3,
 h4 {
   color: #ffffff;
+  margin: 0;
 }
 
 h1 {
@@ -54,7 +55,6 @@ h2 {
 h3,
 h4 {
   font-size: 2.8rem;
-  font-weight: 700;
 }
 
 /* Links */
@@ -138,6 +138,9 @@ a {
   .grid--1x4 {
     grid-template-columns: repeat(4, 1fr);
   }
+  .grid--1x2--big {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -148,7 +151,7 @@ a {
 
 /* .container */
 .container {
-  width: 1140px;
+  max-width: 1140px;
   padding-right: 0 1.5rem;
   margin: 0 auto;
 }
@@ -156,6 +159,7 @@ a {
 /* Intro */
 .intro {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .intro__subtitle {
@@ -347,12 +351,6 @@ a {
   width: 100%;
 }
 
-.profile {
-  object-fit: cover;
-  height: 400px;
-  position: fixed;
-}
-
 .banner__header h3 {
   color: var(--text-muted);
   margin: 0;
@@ -411,4 +409,31 @@ a {
 .typed-cursor {
   margin-left: 2px;
   font-size: 2.8rem;
+}
+
+/* About Me */
+.profile {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  max-width: 340px;
+}
+
+.aboutMe .intro {
+  max-width: 780px;
+  margin: 0 auto 5rem;
+}
+.text-mute {
+  color: var(--text-muted);
+}
+
+.content__domain {
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 980px) {
+  .aboutMe .grid--1x2--big {
+    grid-template-columns: auto 1fr;
+    gap: 8rem;
+  }
 }
