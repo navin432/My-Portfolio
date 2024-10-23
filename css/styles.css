@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-background: #1c1c1e; /* Darker for a more refined look */
+  --color-background: #000; /* Darker for a more refined look */
   --color-light__background: #3a3a3c; /* Slightly lighter for contrast */
   --primary-color: #0056b3; /* Muted blue for professionalism */
   --accent-color: #ff724c; /* Warm accent color for highlights */
@@ -191,15 +191,6 @@ a {
   background: var(--color-light__background);
 }
 
-.block--skewed-right {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
-}
-.block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-
 /* Icons */
 .icon-container {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
@@ -293,7 +284,7 @@ a {
 .nav__list {
   width: 100%;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
 }
 .navbar .list__item {
@@ -507,6 +498,11 @@ a {
   margin-top: 2.5rem;
 }
 
+.contact {
+  padding: 4rem;
+  border-radius: 10px;
+}
+
 .details h4,
 .details p {
   font-size: 1.6rem;
@@ -547,4 +543,12 @@ a {
 
 .contact .btn {
   margin-top: 4rem;
+}
+
+/* Contact Me */
+.contact {
+  transform: translateY(-18rem);
+}
+.contactMe .block--grey {
+  padding-bottom: calc(var(--padding-vertical) + 12rem);
 }
