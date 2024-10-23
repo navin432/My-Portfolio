@@ -159,7 +159,8 @@ a {
 /* Intro */
 .intro {
   text-align: center;
-  margin-bottom: 2rem;
+  max-width: 780px;
+  margin: 0 auto 5rem;
 }
 
 .intro__subtitle {
@@ -194,7 +195,7 @@ a {
 /* Icons */
 .icon-container {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
-  padding: 6rem;
+  padding: 6rem 5rem;
   border-radius: 5px;
   text-align: center;
   color: var(--text-color);
@@ -202,14 +203,14 @@ a {
 }
 
 .icon {
-  font-size: 5.2rem;
-  font-weight: 400;
+  font-size: 5rem;
   margin-bottom: 1.5rem;
 }
 
 .icon__content {
   margin: 0;
   font-weight: 600;
+  font-size: 2rem;
 }
 
 .icon-container:hover {
@@ -419,10 +420,6 @@ a {
   max-width: 340px;
 }
 
-.aboutMe .intro {
-  max-width: 780px;
-  margin: 0 auto 5rem;
-}
 .text-mute {
   color: var(--text-muted);
 }
