@@ -462,3 +462,32 @@ a {
 }
 
 /* My Works */
+
+.works .grid {
+  margin-bottom: 3rem;
+}
+.works__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .works .grid--1x2--big {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .works .grid:nth-of-type(even) .works__image {
+    order: 2;
+  }
+}
+.work__logo-container {
+  align-items: center;
+  background-color: #f3f9fa;
+  border-radius: 100%;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.work__logo {
+  width: 30px;
+}
