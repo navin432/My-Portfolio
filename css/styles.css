@@ -342,7 +342,7 @@ a {
 
 /* Banner */
 .banner {
-  padding: 10rem;
+  padding: 10rem 2rem;
   background-image: url("../images/Profile.png");
   background-repeat: no-repeat;
   background-position: right center;
@@ -409,6 +409,23 @@ a {
 .typed-cursor {
   margin-left: 2px;
   font-size: 2.8rem;
+}
+
+@media screen and (max-width: 450px) {
+  .banner__header h3 {
+    font-size: 1.8rem;
+  }
+  .typed-cursor {
+    font-size: 1.8rem;
+  }
+  .banner__title {
+    font-size: 4rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 2rem;
+  }
 }
 
 /* About Me */
