@@ -457,7 +457,7 @@ a {
 
 @media screen and (min-width: 1000px) {
   .mySkills .grid--1x2--big {
-    gap: 4rem;
+    gap: 8rem;
   }
 }
 
@@ -490,4 +490,53 @@ a {
 
 .work__logo {
   width: 30px;
+}
+
+/* Contact Me */
+.details {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.details h4,
+.details p {
+  font-size: 1.6rem;
+}
+
+.details__content {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+.contact input,
+.contact textarea {
+  background-color: transparent;
+  margin-top: 2rem;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  padding: 2rem;
+  color: #fff;
+}
+
+.contact textarea {
+  resize: none;
+}
+.details .info {
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .contact .grid--1x2--big {
+    gap: 6rem;
+  }
+}
+
+.contact .btn {
+  margin-top: 4rem;
 }
