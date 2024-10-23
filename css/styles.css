@@ -10,7 +10,7 @@
   --color-background: #1c1c1e; /* Darker for a more refined look */
   --color-light__background: #3a3a3c; /* Slightly lighter for contrast */
   --primary-color: #0056b3; /* Muted blue for professionalism */
-  --accent-color: #ff6f61; /* Warm accent color for highlights */
+  --accent-color: #ff724c; /* Warm accent color for highlights */
   --text-color: #e0e0e0; /* Softer text color */
   --text-muted: #b3b3b3; /* Muted text for less prominent elements */
 }
@@ -434,3 +434,31 @@ a {
     gap: 8rem;
   }
 }
+
+.fa-node {
+  color: #6cc24a;
+}
+.fa-database {
+  color: #f29111;
+}
+
+.fa-laptop-code {
+  color: #00d8ff;
+}
+
+/* skills */
+.skill-grid {
+  margin: 0;
+}
+
+.mySkills .grid {
+  gap: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .mySkills .grid--1x2--big {
+    gap: 4rem;
+  }
+}
+
+/* My Works */
