@@ -31,8 +31,6 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
-  background: var(--color-background);
-  padding: 10rem;
 }
 
 h1,
@@ -181,7 +179,8 @@ a {
 
 /* Block */
 .block {
-  padding: 6rem 2rem;
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
 }
 
 .block--dark {
@@ -190,6 +189,15 @@ a {
 
 .block--grey {
   background: var(--color-light__background);
+}
+
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+}
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 /* Icons */
@@ -343,7 +351,7 @@ a {
 
 /* Banner */
 .banner {
-  padding: 2rem;
+  padding: 10rem;
   background-image: url("../images/Profile.png");
   background-repeat: no-repeat;
   background-position: right center;
