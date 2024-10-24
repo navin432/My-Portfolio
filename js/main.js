@@ -37,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav__list .list__item a");
   const skillLevels = document.querySelectorAll(".skill__level");
   const skillBars = document.querySelectorAll(".skill__line--content");
-  let skillsAnimated = false; // To ensure the animation runs only once
-
+  let skillsAnimated = false; 
   const options = {
     root: null,
     threshold: 0.5,
@@ -88,3 +87,62 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 });
+
+// Email
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const sendButton = document.getElementById("send-btn");
+    sendButton.disabled = true;
+    sendButton.innerText = "Sending...";
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("msg").value;
+    const formMessage = document.getElementById("form-message");
+    formMessage.style.display = "none";
+
+    fetch("http://localhost:3000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          formMessage.textContent = "Message Sent Successfully!";
+          formMessage.style.color = "#28a745";
+          formMessage.style.display = "block";
+          formMessage.style.backgroundColor = "#1c1c1c";
+          formMessage.style.padding = "10px";
+          formMessage.style.borderRadius = "5px";
+          sendButton.disabled = false;
+          sendButton.innerText = "Send Message";
+          document.getElementById("contact-form").reset();
+        } else {
+          formMessage.textContent = "Message Failed to Send.";
+          formMessage.style.color = "#dc3545";
+          formMessage.style.display = "block";
+          formMessage.style.backgroundColor = "#1c1c1c";
+          formMessage.style.padding = "10px";
+          formMessage.style.borderRadius = "5px";
+          sendButton.disabled = false;
+          sendButton.innerText = "Send Message";
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        formMessage.textContent = "Message Failed to Send.";
+        formMessage.style.color = "#dc3545";
+        formMessage.style.display = "block";
+        formMessage.style.backgroundColor = "#1c1c1c";
+        formMessage.style.padding = "10px";
+        formMessage.style.borderRadius = "5px";
+        alert("Message Failed to Send.");
+        sendButton.disabled = false;
+        sendButton.innerText = "Send Message";
+      });
+  });

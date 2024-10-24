@@ -332,16 +332,17 @@
       <div class="block--dark container contact">
         <h2>Say Something</h2>
         <article class="grid grid--1x2--big">
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
+          <form id="contact-form">
+            <input type="text" placeholder="Name" id="name" />
+            <input type="email" placeholder="Email" id="email" />
             <textarea
               name="msg"
               id="msg"
               rows="4"
               placeholder="Message"
             ></textarea>
-            <button class="btn btn--white">Send Message</button>
+            <button class="btn btn--white" id="send-btn">Send Message</button>
+            <p id="form-message" style="display: none"></p>
           </form>
           <div class="info">
             <div class="details">
