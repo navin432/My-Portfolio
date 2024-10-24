@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav__list .list__item a");
   const skillLevels = document.querySelectorAll(".skill__level");
   const skillBars = document.querySelectorAll(".skill__line--content");
-  let skillsAnimated = false; 
+  let skillsAnimated = false;
   const options = {
     root: null,
     threshold: 0.5,
@@ -141,7 +141,6 @@ document
         formMessage.style.backgroundColor = "#1c1c1c";
         formMessage.style.padding = "10px";
         formMessage.style.borderRadius = "5px";
-        alert("Message Failed to Send.");
         sendButton.disabled = false;
         sendButton.innerText = "Send Message";
       });
