@@ -225,10 +225,11 @@ a {
 }
 
 .skill__line--content {
-  width: 70%;
+  width: 0%;
   background: var(--accent-color);
   border-radius: 5px;
   height: 5px;
+  transition: width 2s ease;
 }
 
 .skill__details {
@@ -238,6 +239,9 @@ a {
   color: var(--text-muted);
 }
 
+.skill__level {
+  transition: all 2s ease;
+}
 /* logo */
 .logo {
   width: 3rem;
