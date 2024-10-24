@@ -23,6 +23,8 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -310,6 +312,10 @@ ul {
 }
 .navbar .list__item:hover {
   border-bottom: 1px solid var(--accent-color);
+}
+
+.navbar .list__item.active::after {
+  width: 100%;
 }
 
 .nav__toggler {
