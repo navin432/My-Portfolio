@@ -616,3 +616,17 @@ ul {
 .contactMe .block--grey {
   padding-bottom: calc(var(--padding-vertical) + 12rem);
 }
+
+/*  */
+.footer {
+  text-align: center;
+  color: #b0b3b8;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer.block {
+  padding: 4rem 2rem;
+}
