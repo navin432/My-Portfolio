@@ -141,12 +141,6 @@ a {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .grid--1x4__big {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 /* .container */
 .container {
   max-width: 1140px;
@@ -277,6 +271,10 @@ a {
   padding: 0 1rem;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+}
 .navbar .fa-solid {
   font-size: 2.2rem;
 }
@@ -290,6 +288,10 @@ a {
 .navbar .list__item {
   position: relative;
   margin-top: 1rem;
+}
+
+ul {
+  margin-block-end: 0;
 }
 
 .navbar .list__item::after {
