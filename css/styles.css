@@ -8,11 +8,11 @@
 
 :root {
   --color-background: #000; /* Darker for a more refined look */
-  --color-light__background: #3a3a3c; /* Slightly lighter for contrast */
   --primary-color: #0056b3; /* Muted blue for professionalism */
   --accent-color: #ff724c; /* Warm accent color for highlights */
-  --text-color: #e0e0e0; /* Softer text color */
-  --text-muted: #b3b3b3; /* Muted text for less prominent elements */
+  --text-color: #333333; /* Softer text color */
+  --text-muted: #666666; /* Muted text for less prominent elements */
+  --color-light__background: #3a3a3c; /* Slightly lighter for contrast */
 }
 
 /* Typography */
@@ -39,7 +39,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #ffffff;
+  color: #0056b3;
   margin: 0;
 }
 
@@ -95,9 +95,17 @@ a {
   border: 2px solid var(--text-muted);
 }
 
-.btn--transparent:hover {
-  background: var(--text-color);
+.block--dark .btn--transparent {
+  color: #fff;
+}
+.block--dark .btn--transparent:hover {
+  background: #fff;
   color: var(--color-background);
+}
+
+.btn--transparent:hover {
+  background: var(--color-background);
+  color: #fff;
 }
 
 .btn--grey {
@@ -181,12 +189,39 @@ a {
 
 .block--dark {
   background: var(--color-background);
+  color: #e0e0e0;
+}
+
+.block--dark a:not(.btn):not(.fa-brands),
+.block--dark .intro__content {
+  color: #e0e0e0;
+}
+
+.block--dark h1,
+.block--dark h2,
+.block--dark h3,
+.block--dark h4 {
+  color: #fff;
 }
 
 .block--grey {
   background: var(--color-light__background);
+  color: #e0e0e0;
+}
+.block--grey h1,
+.block--grey h2,
+.block--grey h3,
+.block--grey h4 {
+  color: #fff;
+}
+.block--grey a:not(.btn),
+.block--grey .intro__content {
+  color: #e0e0e0;
 }
 
+.block--grey .intro__subtitle {
+  color: #dedede;
+}
 /* Icons */
 .icon-container {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
