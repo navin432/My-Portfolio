@@ -6,15 +6,21 @@ const cors = require("cors");
 const port = process.env.PORT || 3000;
 
 require("./startup/prod")(app);
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net https://unpkg.com;"
+  );
+  next();
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.use(express.static("public"));
+
 const hhhMail = config.get("thhEmail");
 const hhhPass = config.get("password");
-console.log("Config vars loaded:");
-console.log("Email:", hhhMail);
-console.log("Password:", hhhPass);
 
 const transporter = nodemailer.createTransport({
   service: "gmail",

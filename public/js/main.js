@@ -1,3 +1,5 @@
+// Animation
+AOS.init();
 // Domain
 document.addEventListener("DOMContentLoaded", function () {
   const typedItems = document
@@ -104,7 +106,7 @@ document
     const formMessage = document.getElementById("form-message");
     formMessage.style.display = "none";
 
-    fetch("http://localhost:3000/send-email", {
+    fetch("/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
