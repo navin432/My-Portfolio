@@ -390,14 +390,40 @@ ul {
 /* Banner */
 .banner {
   padding: 10rem 2rem;
-  background-image: url("../images/Profile.png");
+  background-image: url("../images/banner.png");
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
   background-attachment: fixed;
   width: 100%;
+  position: relative;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.banner * {
+  position: relative;
+  z-index: 2;
 }
 
+@media (max-width: 700px) {
+  .banner {
+    background-attachment: scroll;
+    background-position: right center;
+    background-size: cover;
+  }
+
+  .banner::before {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
 .banner__header h3 {
   color: #b0b3b8;
   margin: 0;
