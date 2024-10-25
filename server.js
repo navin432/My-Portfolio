@@ -1,6 +1,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const app = express();
+const config = require("config");
 const cors = require("cors");
 const port = 3000;
 
@@ -9,8 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-const hhhMail = process.env.thhEmail;
-const hhhPass = process.env.password;
+const hhhMail = config.get("thhEmail");
+const hhhPass = config.get("password");
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
