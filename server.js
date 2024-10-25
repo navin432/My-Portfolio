@@ -5,6 +5,7 @@ const config = require("config");
 const cors = require("cors");
 const port = 3000;
 
+require("./startup/prod")(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
