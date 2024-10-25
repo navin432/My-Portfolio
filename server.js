@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 const config = require("config");
 const cors = require("cors");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 require("./startup/prod")(app);
 app.use(express.json());
@@ -12,6 +12,9 @@ app.use(cors());
 
 const hhhMail = config.get("thhEmail");
 const hhhPass = config.get("password");
+console.log("Config vars loaded:");
+console.log("Email:", hhhMail);
+console.log("Password:", hhhPass);
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
