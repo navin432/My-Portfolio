@@ -88,6 +88,27 @@ document.addEventListener("DOMContentLoaded", function () {
   sections.forEach((section) => {
     observer.observe(section);
   });
+
+  // The Hiring Hub Development Message
+  const thhdevelop_btn = document.getElementById("thhdevelop");
+  const thh_message = document.getElementById("thhmsg");
+
+  thhdevelop_btn.addEventListener("click", function () {
+    thhdevelop_btn.disabled = true;
+    thhdevelop_btn.classList.replace("btn--white", "btn--transparent");
+    thhdevelop_btn.textContent = "Sorry 😢!";
+
+    thh_message.style.display = "block";
+    thh_message.textContent =
+      "The Hiring Hub is still under development. Updates will be shared post-deployment. Stay tuned for the latest developments!";
+
+    setTimeout(() => {
+      thhdevelop_btn.disabled = false;
+      thhdevelop_btn.classList.replace("btn--transparent", "btn--white");
+      thhdevelop_btn.textContent = "On Development";
+      thh_message.style.display = "none";
+    }, 6000);
+  });
 });
 
 // Email
@@ -118,9 +139,6 @@ document
           formMessage.textContent = "Message Sent Successfully!";
           formMessage.style.color = "#28a745";
           formMessage.style.display = "block";
-          formMessage.style.backgroundColor = "#1c1c1c";
-          formMessage.style.padding = "10px";
-          formMessage.style.borderRadius = "5px";
           sendButton.disabled = false;
           sendButton.innerText = "Send Message";
           document.getElementById("contact-form").reset();
@@ -128,9 +146,6 @@ document
           formMessage.textContent = "Message Failed to Send.";
           formMessage.style.color = "#dc3545";
           formMessage.style.display = "block";
-          formMessage.style.backgroundColor = "#1c1c1c";
-          formMessage.style.padding = "10px";
-          formMessage.style.borderRadius = "5px";
           sendButton.disabled = false;
           sendButton.innerText = "Send Message";
         }
@@ -140,9 +155,6 @@ document
         formMessage.textContent = "Message Failed to Send.";
         formMessage.style.color = "#dc3545";
         formMessage.style.display = "block";
-        formMessage.style.backgroundColor = "#1c1c1c";
-        formMessage.style.padding = "10px";
-        formMessage.style.borderRadius = "5px";
         sendButton.disabled = false;
         sendButton.innerText = "Send Message";
       });

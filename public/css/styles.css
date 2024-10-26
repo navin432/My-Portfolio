@@ -643,7 +643,7 @@ ul {
   padding-bottom: calc(var(--padding-vertical) + 12rem);
 }
 
-/*  */
+/* Footer */
 .footer {
   text-align: center;
   color: #b0b3b8;
@@ -655,4 +655,17 @@ ul {
 
 .footer.block {
   padding: 4rem 2rem;
+}
+
+/* thh and form message */
+#thhmsg,
+#form-message {
+  background-color: #1c1c1c;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+#thhmsg {
+  color: #00e5ff;
 }
