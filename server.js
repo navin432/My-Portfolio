@@ -62,22 +62,22 @@ app.post("/send-email", (req, res) => {
       to: email,
       subject: `Thank you for contacting Navin Gharti`,
       html: `
-    <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-      <h2 style="color: #2E86C1;">Hello, ${name}!</h2>
-      <p>Thank you for getting in touch through my portfolio website. I truly appreciate you taking the time to reach out to me.</p>
-      <p>I've received your message and will carefully review it. You can expect a response shortly, and I’ll do my best to get back to you as soon as possible.</p>
-      <p>In the meantime, feel free to explore more of my work on the site. If there's anything else you'd like to know, don’t hesitate to mention it when I respond.</p>
-      <hr style="border-top: 1px solid #eee;">
-      <p>Here’s a copy of the message you sent for your reference:</p>
-      <blockquote style="background: #f9f9f9; padding: 15px; border-left: 5px solid #2E86C1; margin: 20px 0;">
+  <div style="font-family: 'Arial', sans-serif; color: #333; max-width: 600px; margin: 0 auto; padding: 30px; border: 1px solid #ccc; border-radius: 10px; background-color: #ffffff;">
+    <h2 style="color: #2E86C1; font-size: 20px;">Hello, Hi and Namastey, ${name}!</h2>
+    <p style="font-size: 16px; line-height: 1.5;">Thank you for reaching out through my portfolio website! Your message is much appreciated, and it’s always a pleasure to connect!</p>
+     <p style="font-size: 16px; line-height: 1.5;">I’ve received your message and will review it promptly. You can expect a response shortly—my inbox is not as scary as it sounds, I promise!</p>
+      <p style="font-size: 16px; line-height: 1.5;">In the meantime, feel free to explore more of my work on the site. If you have any additional questions or thoughts, don’t hesitate to mention them in your reply.</p>
+      <hr style="border-top: 1px solid #ddd;">
+      <p style="font-size: 16px; line-height: 1.5;">Here’s a copy of your message for your reference:</p>
+      <blockquote style="background: #f0f8ff; padding: 15px; border-left: 5px solid #2E86C1; margin: 20px 0; font-style: italic;">
         ${message}
       </blockquote>
-      <p>Looking forward to connecting with you soon.</p>
-      <p style="margin-top: 20px;">Best regards,<br><strong>Navin Gharti</strong></p>
-      <hr style="border-top: 1px solid #eee;">
-      <p style="font-size: 12px; color: #999;">This is an automated response to acknowledge receipt of your message.</p>
+      <p style="font-size: 16px; line-height: 1.5;">Looking forward to connecting with you soon!</p>
+      <p style="margin-top: 20px; font-size: 16px; line-height: 1.5;">Best regards,<br><strong style="color: #2E86C1;">Navin Gharti</strong></p>
+      <hr style="border-top: 1px solid #ddd;">
+      <p style="font-size: 12px; color: #999; text-align: center;">This is an automated response to confirm that your message has been received. I will respond personally!</p>
     </div>
-  `,
+`,
     };
     transporter.sendMail(replyOptions, (replyError, replyInfo) => {
       if (replyError) {
