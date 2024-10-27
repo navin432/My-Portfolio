@@ -63,7 +63,7 @@ app.post("/send-email", (req, res) => {
       subject: `Thank you for contacting Navin Gharti`,
       html: `
   <div style="font-family: 'Arial', sans-serif; color: #333; max-width: 600px; margin: 0 auto; padding: 30px; border: 1px solid #ccc; border-radius: 10px; background-color: #ffffff;">
-    <h2 style="color: #2E86C1; font-size: 20px;">Hello, Hi and Namastey, ${name}!</h2>
+    <h2 style="color: #2E86C1; font-size: 20px;">Hello, Hi and Namastey🙏,s ${name}!</h2>
     <p style="font-size: 16px; line-height: 1.5;">Thank you for reaching out through my portfolio website! Your message is much appreciated, and it’s always a pleasure to connect!</p>
      <p style="font-size: 16px; line-height: 1.5;">I’ve received your message and will review it promptly. You can expect a response shortly—my inbox is not as scary as it sounds, I promise!</p>
       <p style="font-size: 16px; line-height: 1.5;">In the meantime, feel free to explore more of my work on the site. If you have any additional questions or thoughts, don’t hesitate to mention them in your reply.</p>
