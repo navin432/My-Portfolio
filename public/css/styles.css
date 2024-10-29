@@ -447,13 +447,7 @@ ul {
   margin-top: 2.4rem;
 }
 
-.mediaIcons img {
-  width: 100%;
-  max-width: 2rem;
-}
-
-.mediaIcons .fa-brands,
-.githhub {
+.mediaIcons .fa-brands {
   margin-left: 1rem;
   font-size: 2rem;
   padding: 1rem;
@@ -461,11 +455,10 @@ ul {
   transition: all 0.5s;
 }
 
-.githhub {
-  padding: 0.7rem 1rem 0.6rem;
+.fa-github {
+  color: #fff;
   border: 1px solid #fff;
 }
-
 .fa-facebook {
   color: #1877f2;
   border: 1px solid #1877f2;
@@ -484,6 +477,9 @@ ul {
   border: 1px solid #f56040;
 }
 
+.fa-github:hover {
+  border: 1px solid red;
+}
 .fa-brands:hover {
   color: #fff;
 }
