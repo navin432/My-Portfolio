@@ -208,6 +208,15 @@ a {
   background: var(--color-light__background);
   color: #e0e0e0;
 }
+
+.block--pattern {
+  background-image: radial-gradient(
+    rgba(143, 224, 133, 0.233) 2px,
+    transparent 0
+  );
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+}
 .block--grey h1,
 .block--grey h2,
 .block--grey h3,
@@ -677,4 +686,41 @@ ul {
 
 #thhmsg {
   color: #00e5ff;
+}
+
+/* Loading */
+
+.loading {
+  display: inline-block;
+  transform: translateY(1.2rem);
+  margin-left: 1rem;
+}
+.loading svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #ff4d504d;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: red;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.2s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
