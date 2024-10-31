@@ -450,7 +450,7 @@ ul {
 .mediaIcons .fa-brands {
   margin-left: 1rem;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 50%;
   transition: all 0.5s;
 }
