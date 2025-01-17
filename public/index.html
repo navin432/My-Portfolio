@@ -386,13 +386,30 @@
         <h2>Drop a Message</h2>
         <article class="grid grid--1x2--big">
           <form id="contact-form">
-            <input type="text" placeholder="Your Name" id="name" />
-            <input type="email" placeholder="Your Email" id="email" />
+            <input
+              type="text"
+              placeholder="Your Name"
+              required
+              id="name"
+              oninvalid="this.setCustomValidity('Please Enter Your Name')"
+              oninput="this.setCustomValidity('')"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              required
+              id="email"
+              oninvalid="this.setCustomValidity('Please Enter a valid Email')"
+              oninput="this.setCustomValidity('')"
+            />
             <textarea
               name="msg"
               id="msg"
               rows="4"
               placeholder="Message"
+              required
+              oninvalid="this.setCustomValidity('Message should not be empty')"
+              oninput="this.setCustomValidity('')"
             ></textarea>
             <button class="btn btn--white" id="send-btn">Send Message</button>
             <p id="form-message"></p>
